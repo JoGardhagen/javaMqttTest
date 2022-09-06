@@ -1,5 +1,6 @@
 package com.newproject.newproject;
 
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
@@ -27,6 +28,7 @@ public class HelloController {
         MqttClient client = new MqttClient("tcp://localhost:1883", MqttClient.generateClientId());
         if (markCheck){
             String messageToSend = MsgBox.getText();
+            messageToSend += " Client 1";
             client.connect();
             var message = new MqttMessage();
             message.setPayload(messageToSend.getBytes());
