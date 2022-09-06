@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.newproject.newproject.HelloController">
    <children>
-      <Button fx:id="Btn" layoutX="273.0" layoutY="75.0" mnemonicParsing="false" onAction="#OnButtonClicked" text="Button" />
-      <Label fx:id="Label" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="144.0" prefHeight="18.0" prefWidth="600.0" text="Label" />
+      <Button fx:id="Btn" layoutX="40.0" layoutY="21.0" mnemonicParsing="false" onAction="#OnButtonClicked" text="Send" />
+      <ListView fx:id="MessageListView" layoutX="263.0" layoutY="46.0" prefHeight="316.0" prefWidth="317.0" />
+      <TextField fx:id="MsgBox" layoutX="40.0" layoutY="68.0" />
+      <CheckBox fx:id="MarkTosend" layoutX="105.0" layoutY="25.0" mnemonicParsing="false" onAction="#OnMarked" text="Mark to send" />
    </children>
 </AnchorPane>
